@@ -1,0 +1,39 @@
+{
+  "site": {
+    "title": "Uplift Contractor",
+    "base_url": "https://app.upliftcontractor.com/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/ucdark.avif",
+    "logo": "/images/ucdark.avif",
+    "logo_width": "70",
+    "logo_height": "40",
+    "logo_text": "Automark"
+  },
+  "settings": {
+    "sticky_header": true
+  },
+  "params": {
+    "contact_form_action": "#",
+    "checklist_form_action": "#",
+    "apply_form_action": "#",
+    "copyright": "Copyright &copy; 2026 <strong><a target=\"_blank\" href=\"https://upliftcontractor.com/\">Uplift contractor</a></strong> All Rights Reserved",
+    "footer_tagline": "Empowering Marketing businesses through intelligent automation.",
+    "footer_email": "info@upliftcontractor.com",
+    "footer_phone": "(+88)01834969563"
+  },
+  "navigation_button": {
+    "enable": true,
+    "label": "Login",
+    "link": "https://app.upliftcontractor.com/"
+  },
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+  "metadata": {
+    "meta_author": "Uplift Contractor",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "The all-in-one marketing and sales automation platform"
+  }
+}

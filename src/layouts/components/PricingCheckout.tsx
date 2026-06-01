@@ -31,37 +31,10 @@ export default function PricingCheckout({
     setLoading(true);
     setError("");
 
-    // Determine interval dynamically directly from the DOM checkbox
-    const toggleEl = document.getElementById("pricing-toggle") as HTMLInputElement;
-    const isYearly = toggleEl?.checked ?? false;
-
-    const priceToCharge = isYearly ? yearlyPrice : monthlyPrice;
-    const intervalToCharge = isYearly ? "year" : "month";
-
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          planTitle,
-          price: priceToCharge,
-          interval: intervalToCharge,
-        }),
-      });
-
-      const data = await res.json();
-      if (data.success && data.url) {
-        window.location.href = data.url;
-      } else {
-        setError(data.error || "Failed to initiate checkout. Please try again.");
-        setLoading(false);
-      }
-    } catch (err: any) {
-      setError("Network error occurred. Please try again.");
-      setLoading(false);
-    }
+    // Static site — pricing checkout is disabled, show demo message
+    setError("Checkout is not available on this demo site.");
+    setLoading(false);
+    return;
   };
 
   return (

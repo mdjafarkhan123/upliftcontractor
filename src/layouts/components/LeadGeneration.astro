@@ -129,24 +129,8 @@ const { lead_generation } = Astro.props;
     setLoading(true);
 
     try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-        }),
-      });
-
-      const json = await res.json().catch(() => ({}));
-
-      if (res.ok && json.success) {
-        showSuccess();
-      } else {
-        showError(json.error ?? "Something went wrong. Please try again.");
-      }
-    } catch {
-      showError("Network error — please check your connection and try again.");
+      // Static site — show success without API call
+      showSuccess();
     } finally {
       setLoading(false);
     }
